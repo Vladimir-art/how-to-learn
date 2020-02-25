@@ -20,13 +20,12 @@
     background-color: #f2f2f2;
 }
 
-.logo  {
-  position: absolute;
-}
-
 .logo_place_header {
+  position: absolute;
   top: 30px;
   left: 64px;
+  width: 183px;
+  height: 32px;
 }
 
 .header__title {
@@ -34,13 +33,10 @@
  width: 730px;
  align-self: center;
  z-index: 2;
-}
-
-.header__title_text {
-  line-height: 96px;
-  font-size: 102px;
-  font-weight: bold;
-  margin: 0 0 0 64px;
+ line-height: 96px;
+ font-size: 102px;
+ font-weight: bold;
+ margin: 0 0 0 64px;
 }
 
 .header__subtitle {
@@ -49,9 +45,6 @@
     bottom: 30px;
     left: 64px;
     z-index: 2;
-}
-
-.header__subtitle_text {
     line-height: 25px;
     font-size: 18px;
     font-weight: normal; 
@@ -103,17 +96,14 @@
 
 .two-columns__brief {
     width: 175px;
+    margin: 0;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
+    color: #2F80ED;
 }
 
 /* работа непосредственно с текстом второй секции сайта*/
-
-.two-columns__brief_text {
-  margin: 0;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
-  color: #2F80ED;
-}
 
 .two-columns__paragraph {
     margin: 0 0 30px;
@@ -144,11 +134,21 @@
     width: 60%;
     align-self: center;
     margin-bottom: 20px;
+    margin: 0;
+    text-align: center;
+    line-height: 69px;
+    font-size: 60px;
+    font-weight: bold;
 }
 
 .section-subtitle {
     width: 60%;
     align-self: center;
+    margin: 0;
+    text-align: center;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
 }
 
 .table {
@@ -167,22 +167,6 @@
 
 /* работа непосредственно с текстом третьей секции сайта*/
 
-.section-title_text {
-    margin: 0;
-    text-align: center;
-    line-height: 69px;
-    font-size: 60px;
-    font-weight: bold;
-}
-
-.section-subtitle_text {
-    margin: 0;
-    text-align: center;
-    line-height: 34px;
-    font-size: 24px;
-    font-weight: normal;
-}
-
 .table__heading {
     margin: 0 0 20px;
     line-height: 1.15;
@@ -197,14 +181,14 @@
     font-weight: normal;
 }
 
-.table__text-source {
-    margin: 20px 0 0;
+.table__cell :nth-child(3) {
+    margin-top: 20px;
 }
 
 /* разметка четвертой секции сайта Feinman*/
 
 .feinman {
-   height: 890px;
+   height: 790px;
    background-color: #f2f2f2;
    background-image: url(../images/feinman.png);
    background-repeat: no-repeat;
@@ -213,46 +197,31 @@
    -o-background-size: 867px 637px;
    -moz-background-size: 867px 637px;
    position: relative;
-   /* padding-top: 100px; */
 }
 
 .feinman__title {
     width: 648px;
-    margin: 0 auto;
-    padding-top: 100px;
-}
-
-.feinman__subtitle {
-    width: 648px;
-    margin: 0 auto;
-    padding-top: 70px;
-}
-
-.feinman__link {
-    position: absolute;
-    top: 50%;
-    right: 48px;
-}
-
-/* работа непосредственно с текстом четвертой секции сайта Feinman*/
-
-.feinman__title_text {
-    margin: 0;
+    margin: 100px auto 0;
+    padding: 0;
     text-align: center;
     line-height: 1.15;
     font-size: 120px;
     font-weight: bold;
 }
 
-.feinman__subtitle_text {
-    margin: 0;
+.feinman__subtitle {
+    width: 648px;
+    margin: 70px auto 0;
     text-align: center;
     line-height: 51px;
     font-size: 36px;
     font-weight: normal;
 }
 
-.feinman__link_text {
+.feinman__link {
+    position: absolute;
+    top: 50%;
+    right: 48px;
     margin: 0;
     line-height: 51px;
     font-size: 36px;
@@ -267,17 +236,20 @@
     display: flex;
     flex-direction: column;
     padding: 90px 0;
-    background-color: black;
+    background-color: #1f1f1f;
     position: relative;
     overflow: hidden;
  }
 
  .kaufman__triangle {
+    background-image: url(../images/triangle.svg);
+    background-repeat: no-repeat;
+    background-size: 877px 877px;
     width: 877px;
     height: 877px;
     position: absolute;
     top: 0;
-    right: -220px;
+    right: -210px;
 }
 
  .section-title {
@@ -292,13 +264,10 @@
     align-self: center;
     z-index: 1;
 }
+  
+/* пятая секция сайта */
 
 .table_theme_dark {
-    width: 1100px;
-    align-self: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     z-index: 1;
 }
 
@@ -347,7 +316,7 @@
 /* подвал */
 
 .footer {
-    background-color: black;
+    background-color: #1f1f1f;
     padding: 60px 0;
 }
 
@@ -357,19 +326,23 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    flex-basis: 711px;
 }
 
-.footer__colums_copyright {
-    width: 50%;
+.footer__colum {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__colum_content_copyright {
+    flex-basis: 711px;
     position: relative;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
 
 .logo_place_footer {
   position: relative;
+  width: 183px;
+  height: 35px;
   width: 183px;
   height: 35px;  
 }
@@ -397,18 +370,28 @@
 }
 
 .footer__column-links {
-    margin-bottom: 16px;
-    text-decoration: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0; 
+    list-style-type: none;
+}
+
+.footer__column-link {
     display: flex;
     line-height: 30px;
     font-size: 18px;
     font-weight: normal;
+    text-decoration: none;
     color: white;
 }
 
 .footer__social-icon {
     margin-right: 10px;
     align-self: center;
+    width: 16px;
+    height: 16px;
 }
 
 
@@ -417,10 +400,8 @@
 
 
 
-
-
-
-/* div, h1, h2, h3, a, p, nav, img, address {
+/* 
+div, h1, h2, h3, a, p, nav, img, address, ul, li, * {
     border: 1px solid red;
 }
 section {
