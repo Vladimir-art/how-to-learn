@@ -1,3 +1,9 @@
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .page {
     min-width: 1100px;
     /* мы ещё не умеем делать мобильную версию сайта, */
@@ -12,12 +18,13 @@
 /* работа с шапкой сайта */
 
 .header {
-    height: 100vh;
-    min-height: 600px;
-    max-height: 756px;
-    display: flex;
-    position: relative;
-    background-color: #f2f2f2;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 756px;
+  display: flex;
+  position: relative;
+  background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 .logo_place_header {
@@ -29,14 +36,14 @@
 }
 
 .header__title {
- display: flex;
- width: 730px;
- align-self: center;
- z-index: 2;
- line-height: 96px;
- font-size: 102px;
- font-weight: bold;
- margin: 0 0 0 64px;
+  display: flex;
+  width: 730px;
+  align-self: center;
+  z-index: 2;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: bold;
+  margin: 0 0 0 64px;
 }
 
 .header__subtitle {
@@ -47,8 +54,8 @@
     z-index: 2;
     line-height: 25px;
     font-size: 18px;
-    font-weight: normal; 
-    margin: 0; 
+    font-weight: normal;
+    margin: 0;
 }
 
 .header__link {
@@ -57,7 +64,7 @@
 }
 
 .header__link:hover {
-    text-shadow: 0 0 1px;
+    text-shadow: 0 0 2px;
 }
 
 .header__square-pic {
@@ -68,6 +75,8 @@
     right: 0;
     top: 64px;
     z-index: 0;
+    transform: rotate(-15deg);
+    animation: rotation 20s linear infinite;
 }
 
 .header__main-illustration {
@@ -76,12 +85,12 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 1;   
+    z-index: 1;
 }
 
-/* разметка второй секции сайта */
+/* разметка секции сайта Descriptions*/
 
-.description { 
+.description {
   display: flex;
   justify-content: center;
   margin: 100px 0;
@@ -89,7 +98,7 @@
 
 .two-columns {
   display: flex;
-  width: 80%;   
+  width: 80%;
   justify-content: space-between;
 }
 
@@ -106,8 +115,6 @@
     font-weight: normal;
     color: #2F80ED;
 }
-
-/* работа непосредственно с текстом второй секции сайта*/
 
 .two-columns__paragraph {
     margin: 0 0 30px;
@@ -126,7 +133,107 @@
   font-weight: bold;
 }
 
-/* разметка третьей секции сайта */
+/* разметка секции сайта Technics */
+
+  .technics {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 100px;
+  }
+
+  .cards {
+    width: 920px;
+    margin: 0 auto;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    grid-row-gap: 60px;
+    grid-column-gap: 100px;
+  }
+
+  .cards__image {
+    width: 160px;
+    height: 160px;
+    margin: 0 40px 43px;
+    border-radius: 50%;
+  }
+
+  .cards__title {
+    margin: 0 0 16px;
+    padding: 0;
+    text-align: center;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .cards__description {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+
+
+/* разметка секции сайта Video */
+
+/* разметка секции сайта Oakley */
+
+/* разметка пятой секции сайта Feinman*/
+
+.feinman {
+  height: 790px;
+  padding-top: 100px;
+  background-color: #f2f2f2;
+  background-image: url(../images/feinman.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 867px 637px;
+  -o-background-size: 867px 637px;
+  -moz-background-size: 867px 637px;
+  position: relative;
+}
+
+.feinman__title {
+   width: 648px;
+   margin: 0 auto;
+   padding: 0;
+   text-align: center;
+   line-height: 1.15;
+   font-size: 120px;
+   font-weight: bold;
+}
+
+.feinman__subtitle {
+   width: 648px;
+   margin: 70px auto 0;
+   text-align: center;
+   line-height: 51px;
+   font-size: 36px;
+   font-weight: normal;
+}
+
+.feinman__link {
+   position: absolute;
+   top: 50%;
+   right: 48px;
+   margin: 0;
+   line-height: 51px;
+   font-size: 36px;
+   font-weight: normal;
+   color: black;
+   text-decoration: none;
+}
+
+.feinman__link:hover {
+   text-shadow: 0 0 2px;
+}
+
+/* разметка секции сайта Digits */
 
 .digits {
     display: flex;
@@ -137,10 +244,9 @@
 .section-title {
     width: 60%;
     align-self: center;
-    margin-bottom: 20px;
-    margin: 0;
+    margin: 0 0 20px;
     text-align: center;
-    line-height: 69px;
+    line-height: 1.15;
     font-size: 60px;
     font-weight: bold;
 }
@@ -169,7 +275,7 @@
   margin-right: 0;
 }
 
-/* работа непосредственно с текстом третьей секции сайта*/
+/* работа непосредственно с текстом секции сайта Digits*/
 
 .table__heading {
     margin: 0 0 20px;
@@ -189,57 +295,10 @@
     margin-top: 20px;
 }
 
-/* разметка четвертой секции сайта Feinman*/
+/* разметка секции сайта Khan*/
 
-.feinman {
-   height: 790px;
-   padding-top: 100px;
-   background-color: #f2f2f2;
-   background-image: url(../images/feinman.png);
-   background-repeat: no-repeat;
-   background-position: left bottom;
-   background-size: 867px 637px;
-   -o-background-size: 867px 637px;
-   -moz-background-size: 867px 637px;
-   position: relative;
-}
 
-.feinman__title {
-    width: 648px;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    line-height: 1.15;
-    font-size: 120px;
-    font-weight: bold;
-}
-
-.feinman__subtitle {
-    width: 648px;
-    margin: 70px auto 0;
-    text-align: center;
-    line-height: 51px;
-    font-size: 36px;
-    font-weight: normal;
-}
-
-.feinman__link {
-    position: absolute;
-    top: 50%;
-    right: 48px;
-    margin: 0;
-    line-height: 51px;
-    font-size: 36px;
-    font-weight: normal;
-    color: black;
-    text-decoration: none;
-}
-
-.feinman__link:hover {
-    text-shadow: 0 0 1px;
-}
-
-/* разметка 5 секции сайта */
+/* разметка секции сайта Kaufman*/
 
  .kaufman {
     display: flex;
@@ -260,8 +319,6 @@
     top: 0;
     right: -210px;
 }
-  
-/* пятая секция сайта */
 
 .table_theme_dark {
     z-index: 1;
@@ -272,8 +329,6 @@
   margin-top: 80px;
   margin-right: 0;
 }
-
-/* работа непосредственно с текстом 5 секции сайта*/
 
 .section-title_theme_dark {
     color: white;
@@ -293,14 +348,17 @@
     color: white;
 }
 
-/* подвал */
+/* разметка секции сайта Resources*/
+
+
+/* Footer */
 
 .footer {
     background-color: #1f1f1f;
     padding: 60px 0;
 }
 
-.footer__colums {
+.footer__columns {
     min-height: 350px;
     width: 90%;
     margin: 0 auto;
@@ -308,12 +366,12 @@
     justify-content: space-between;
 }
 
-.footer__colum {
+.footer__column {
   display: flex;
   flex-direction: column;
 }
 
-.footer__colum_content_copyright {
+.footer__column_content_copyright {
     flex-basis: 711px;
     position: relative;
     justify-content: space-between;
@@ -351,7 +409,7 @@
     margin: 0 0 16px;
     display: flex;
     flex-direction: column;
-    padding: 0; 
+    padding: 0;
     list-style-type: none;
 }
 
@@ -379,12 +437,7 @@
 
 
 
-
-
-
-div, h1, h2, h3, a, p, nav, img, address, ul, li, * {
+/* div, h1, h2, h3, a, p, nav, img, address, ul, li, * {
     border: 1px solid red;
-}
-section {
-    border: 1px solid red;
-}
+} */
+
