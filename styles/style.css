@@ -177,11 +177,30 @@
     font-weight: normal;
   }
 
-
-
 /* разметка секции сайта Video */
 
+.video {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.video__iframes {
+  margin: 50px auto -50px;
+}
+
+.video__iframes :first-child {
+  margin-right: 20px;
+}
+
 /* разметка секции сайта Oakley */
+
+.oakley {
+  display: flex;
+  justify-content: center;
+  padding: 160px 0 80px;
+  background-color: #f2f2f2;
+}
 
 /* разметка пятой секции сайта Feinman*/
 
@@ -437,7 +456,7 @@
 
 
 
-/* div, h1, h2, h3, a, p, nav, img, address, ul, li, * {
+div, h1, h2, h3, a, p, nav, img, address, ul, li, * {
     border: 1px solid red;
-} */
+}
 
