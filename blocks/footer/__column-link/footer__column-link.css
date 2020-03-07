@@ -1,0 +1,14 @@
+@import url(../__social-icon/footer__social-icon.css);
+
+.footer__column-link {
+  display: flex;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
+
+.footer__column-link:hover {
+  text-shadow: 0 0 2px;
+}
